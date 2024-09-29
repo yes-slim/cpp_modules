@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 16:03:39 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/28 20:03:24 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:06:35 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,27 @@
 
 int	main(void)
 {
+	PhoneBook	phone;
 	while (true)
 	{
-		// PhoneBook	phone;
-
-		
-		std::string input;
+		std::string cmd;
 		std::cout << "Phonebook> ";
-		std::getline(std::cin, input);
+		std::getline(std::cin, cmd);
 		if (std::cin.eof())
 			break;
-		else if (!input.compare("ADD"))
-			std::cout << "ADD cmd" << std::endl;
-		else if (!input.compare("SEARCH"))
-			std::cout << "SEARCH cmd" << std::endl;
-		else if (!input.compare("EXIT"))
+		else if(cmd.empty())
+			continue;
+		if (!cmd.compare("ADD"))
+			phone.add_conntact();
+		else if (!cmd.compare("SEARCH")){
+			phone.search_contact();	
+		}
+		else if (!cmd.compare("EXIT")){
+			std::cout << "Exiting ...." << std::endl;
 			exit(EXIT_SUCCESS);
+		}
 		else 
-			std::cout << "Please enter a valid cmd : ADD or SEARCH or EXIT";
-		std::cout << std::endl;
+			std::cout << "Please enter a valid cmd : ADD or SEARCH or EXIT" << std::endl;
 	}
 	return (EXIT_SUCCESS);
 }

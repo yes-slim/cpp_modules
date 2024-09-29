@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 16:27:04 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/28 20:30:08 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/09/29 19:02:51 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ class PhoneBook
 	public:
 		PhoneBook();
 		~PhoneBook();
-		void	add_contact(void);
-		
+		void	add_conntact(void);
+		void	search_contact(void);
+		void	list_phonebook(void);
 };
-
+	
 #endif
