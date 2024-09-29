@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:58:43 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/29 19:02:54 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/09/29 22:40:22 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 class Contact
 {
 	private:
-		int			id;
 		std::string	firstname;
 		std::string	lastname;
 		std::string	nickname;
