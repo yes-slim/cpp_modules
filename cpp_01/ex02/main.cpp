@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 13:36:15 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/30 13:47:43 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/09/30 23:42:56 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main()
 {
+	std::string str = "la9lawiiiiiii";
 	std::string string = "HI THIS IS BRAIN";
 	std::string *stringPRT = &string;
 	std::string &stringREF = string;
