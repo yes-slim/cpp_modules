@@ -5,33 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 19:01:34 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/01 10:15:01 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/01 10:19:25 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/01 11:02:06 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "sed.hpp"
 
-int main()
-{
-	{
-		Weapon club = Weapon("crude spiked club");
-		
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+int main(int ac, char **av){
+	if (ac != 4){
+		std::cout << "usage: ./sed filename s1 s2" << std::endl;
+		return 1;
 	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
+	else{
+		sed sed(av[1]);
+		sed.replace(av[2], av[3]);
 	}
 	return 0;
 }
