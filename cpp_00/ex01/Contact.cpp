@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 16:15:58 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/30 00:07:29 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/02 12:09:20 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ std::string	get_input(std::string str){
 
 std::string trunc_str(std::string str) {
   if (str.length() > 10)
-    str = str.substr(0, 7) + "...";
+    str = str.substr(0, 9) + ".";
   std::cout << std::setw(10);
   return str;
 }
