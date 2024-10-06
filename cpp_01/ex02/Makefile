@@ -6,7 +6,7 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/30 13:39:07 by yes-slim          #+#    #+#              #
-#    Updated: 2024/09/30 13:46:57 by yes-slim         ###   ########.fr        #
+#    Updated: 2024/10/07 00:22:21 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,3 +28,5 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

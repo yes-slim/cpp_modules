@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/06 23:58:41 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/07 00:10:17 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/07 00:21:12 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int Fixed::toInt() const {
 }
 
 std::ostream &operator<<(std::ostream &os, const Fixed &obj) {
-	os << obj.toFloat();// TODO: insert return statement here
+	os << obj.toFloat();
 	return os;
 }
 
