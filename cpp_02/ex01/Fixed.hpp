@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/06 23:56:01 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/07 00:12:40 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/06 23:58:19 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/07 00:12:29 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,27 @@
 # define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
-class	Fixed {
+class	Fixed
+{
 	private:
 		int	fixed_num;
 		static const int	frac_num = 8;
+	
 	public:
 		Fixed();
-		Fixed(Fixed& obj);
-		Fixed	&operator=(Fixed& obj);
+		Fixed(const Fixed &obj);
+		Fixed &operator=(const Fixed &obj);
 		~Fixed();
-		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+		int	getRawBits(void) const;
+		void	setRawBits(int const raw);
+		Fixed(const int num);
+		Fixed(const float num);
+		float	toFloat(void) const;
+		int	toInt(void) const;
 };
+
+std::ostream &operator<<(std::ostream &os, const Fixed &obj);
 
 #endif
