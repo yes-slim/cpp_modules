@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 10:28:55 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/07 10:38:50 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/07 20:29:48 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ FragTrap::FragTrap() {
 }
 
 FragTrap::FragTrap(std::string name) {
-	std::cout << "FragTrap constructor called" << std::endl;
+	std::cout << "FragTrap Parametric constructor called" << std::endl;
 	this->name = name;
 	hitpoints = 100;
 	energy_points = 100;
