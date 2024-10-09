@@ -6,13 +6,13 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:25:41 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 13:49:17 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:46:51 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : type("Animal"){
+Animal::Animal() : type("Animal") {
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 };
 
