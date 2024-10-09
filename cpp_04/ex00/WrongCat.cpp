@@ -1,46 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:25:41 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 11:47:45 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/09 12:45:58 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/09 12:48:46 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongCat.hpp"
 
-Animal::Animal() : type("Animal"){
+WrongCat::WrongCat() : WrongAnimal("WrongCat") {
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 };
 
-Animal::Animal(const Animal &obj) {
+WrongCat::WrongCat(const WrongCat &obj) {
 	std::cout << "Copy constructor for " << this->type << " is called" << std::endl;
 	*this = obj;
 };
 
-Animal &Animal::operator=(const Animal &obj) {
+WrongCat &WrongCat::operator=(const WrongCat &obj) {
 	std::cout << "Copy assignement operator for " << this->type << " is called" << std::endl;		
 	if (this != &obj)
 		this->type = obj.type;
 	return *this;
 };
 
-Animal::~Animal() {
+WrongCat::~WrongCat() {
 	std::cout << "Destructor for " << this->type << " is called" << std::endl;
 };
 
-
-Animal::Animal(std::string _type) : type(_type) {
+WrongCat::WrongCat(std::string _type) : WrongAnimal(_type) {
 	std::cout << "Parametric consturcor for " << this->type << " is called" << std::endl;
 };
 
-void	Animal::makeSound() const {
-	std::cout << "Random animal sound" << std::endl;
+void	WrongCat::makeSound() const {
+	std::cout << "Wrong meow meow" << std::endl;
 };
 
-std::string	Animal::getType() const {
+std::string	WrongCat::getType() const {
 	return this->type;
 };

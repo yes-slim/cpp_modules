@@ -6,14 +6,14 @@
 #    By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 00:26:32 by yes-slim          #+#    #+#              #
-#    Updated: 2024/10/08 00:27:02 by yes-slim         ###   ########.fr        #
+#    Updated: 2024/10/09 12:46:40 by yes-slim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 NAME = Animal
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME) 

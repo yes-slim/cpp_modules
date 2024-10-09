@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 19:10:16 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/09/30 19:45:00 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/08 23:27:31 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ void	HumanB::attack(){
 		std::cout << this->name << " doesn't have a weapon" << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon &weapon){
+void	HumanB::Weapon(Weapon &weapon){
 	this->weapon = &weapon;
 }

@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:25:41 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 11:47:45 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/09 12:45:37 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/09 12:48:32 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal() : type("Animal"){
+WrongAnimal::WrongAnimal() : type("WrongAnimal"){
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 };
 
-Animal::Animal(const Animal &obj) {
+WrongAnimal::WrongAnimal(const WrongAnimal &obj) {
 	std::cout << "Copy constructor for " << this->type << " is called" << std::endl;
 	*this = obj;
 };
 
-Animal &Animal::operator=(const Animal &obj) {
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &obj) {
 	std::cout << "Copy assignement operator for " << this->type << " is called" << std::endl;		
 	if (this != &obj)
 		this->type = obj.type;
 	return *this;
 };
 
-Animal::~Animal() {
+WrongAnimal::~WrongAnimal() {
 	std::cout << "Destructor for " << this->type << " is called" << std::endl;
 };
 
 
-Animal::Animal(std::string _type) : type(_type) {
+WrongAnimal::WrongAnimal(std::string _type) : type(_type) {
 	std::cout << "Parametric consturcor for " << this->type << " is called" << std::endl;
 };
 
-void	Animal::makeSound() const {
-	std::cout << "Random animal sound" << std::endl;
+void	WrongAnimal::makeSound() const {
+	std::cout << "Random WrongAnimal sound" << std::endl;
 };
 
-std::string	Animal::getType() const {
+std::string	WrongAnimal::getType() const {
 	return this->type;
 };
