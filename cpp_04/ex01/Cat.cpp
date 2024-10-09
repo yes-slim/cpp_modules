@@ -6,14 +6,14 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:43:25 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 14:42:43 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:18:58 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : Animal("Cat"){
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 	this->brain = new Brain();
 };
@@ -26,7 +26,10 @@ Cat::Cat(const Cat &obj) {
 Cat &Cat::operator=(const Cat &obj) {
 	std::cout << "Copy assignement operator for " << this->type << " is called" << std::endl;		
 	if (this != &obj)
+	{
 		this->type = obj.type;
+		this->brain = new Brain(*obj.brain);
+	}
 	return *this;
 };
 
@@ -35,15 +38,6 @@ Cat::~Cat() {
 	delete this->brain;
 };
 
-Cat::Cat(std::string _type) : Animal(_type) {
-	std::cout << "Parametric consturcor for " << this->type << " is called" << std::endl;
-	this->brain = new Brain();
-};
-
 void	Cat::makeSound() const {
 	std::cout << "meow meow" << std::endl;
-};
-
-std::string	Cat::getType() const {
-	return this->type;
 };

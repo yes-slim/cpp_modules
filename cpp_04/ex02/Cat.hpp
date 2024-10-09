@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:45:39 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:12:34 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/09 11:39:11 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/09 20:25:56 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class	Dog : public Animal
+class	Cat : public AAnimal
 {
 	private:
-		Brain	*brain;
+		Brain		*brain;
 	
 	public:
-		Dog();
-		Dog(const Dog &obj);
-		Dog &operator=(const Dog &obj);
-		~Dog();
+		Cat();
+		Cat(const Cat &obj);
+		Cat &operator=(const Cat &obj);
+		~Cat();
 
 		void	makeSound() const;
 };

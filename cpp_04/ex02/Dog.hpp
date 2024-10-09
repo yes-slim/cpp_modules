@@ -6,17 +6,17 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:45:39 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:12:34 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:25:40 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class	Dog : public Animal
+class	Dog : public AAnimal
 {
 	private:
 		Brain	*brain;

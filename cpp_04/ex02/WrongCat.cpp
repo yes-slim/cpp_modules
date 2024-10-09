@@ -1,42 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:46:16 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:18:54 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/09 12:45:58 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/09 12:48:46 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
-#include "Brain.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() : Animal("Dog") {
+WrongCat::WrongCat() : WrongAnimal("WrongCat") {
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
-	this->brain = new Brain();
 };
 
-Dog::Dog(const Dog &obj) {
+WrongCat::WrongCat(const WrongCat &obj) {
 	std::cout << "Copy constructor for " << this->type << " is called" << std::endl;
 	*this = obj;
 };
 
-Dog &Dog::operator=(const Dog &obj) {
+WrongCat &WrongCat::operator=(const WrongCat &obj) {
 	std::cout << "Copy assignement operator for " << this->type << " is called" << std::endl;		
-	if (this != &obj) {
+	if (this != &obj)
 		this->type = obj.type;
-		this->brain = new Brain(*obj.brain);
-	}
 	return *this;
 };
 
-Dog::~Dog() {
+WrongCat::~WrongCat() {
 	std::cout << "Destructor for " << this->type << " is called" << std::endl;
-	delete this->brain;
 };
 
-void	Dog::makeSound() const {
-	std::cout << "woof woof" << std::endl;
+WrongCat::WrongCat(std::string _type) : WrongAnimal(_type) {
+	std::cout << "Parametric consturcor for " << this->type << " is called" << std::endl;
+};
+
+void	WrongCat::makeSound() const {
+	std::cout << "Wrong meow meow" << std::endl;
+};
+
+std::string	WrongCat::getType() const {
+	return this->type;
 };

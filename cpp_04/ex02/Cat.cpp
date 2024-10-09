@@ -1,42 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:46:16 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:18:54 by yes-slim         ###   ########.fr       */
+/*   Created: 2024/10/09 11:43:25 by yes-slim          #+#    #+#             */
+/*   Updated: 2024/10/09 20:27:06 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 #include "Brain.hpp"
 
-Dog::Dog() : Animal("Dog") {
+Cat::Cat() : AAnimal("Cat"){
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 	this->brain = new Brain();
 };
 
-Dog::Dog(const Dog &obj) {
+Cat::Cat(const Cat &obj) {
 	std::cout << "Copy constructor for " << this->type << " is called" << std::endl;
 	*this = obj;
 };
 
-Dog &Dog::operator=(const Dog &obj) {
+Cat &Cat::operator=(const Cat &obj) {
 	std::cout << "Copy assignement operator for " << this->type << " is called" << std::endl;		
-	if (this != &obj) {
+	if (this != &obj)
+	{
 		this->type = obj.type;
 		this->brain = new Brain(*obj.brain);
 	}
 	return *this;
 };
 
-Dog::~Dog() {
+Cat::~Cat() {
 	std::cout << "Destructor for " << this->type << " is called" << std::endl;
 	delete this->brain;
 };
 
-void	Dog::makeSound() const {
-	std::cout << "woof woof" << std::endl;
+void	Cat::makeSound() const {
+	std::cout << "meow meow" << std::endl;
 };

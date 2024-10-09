@@ -6,14 +6,14 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:46:16 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:18:54 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 20:26:01 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog() : Animal("Dog") {
+Dog::Dog() : AAnimal("Dog") {
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 	this->brain = new Brain();
 };
