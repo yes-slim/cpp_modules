@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:25:25 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:30:55 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 22:13:51 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,52 +14,52 @@
 #include "Dog.hpp"
 
 int main(void) {
-	AAnimal animal;
-//   std::cout << "--------------Subject example-----------------" << std::endl;
+	// AAnimal animal;
+  std::cout << "--------------Subject example-----------------" << std::endl;
 
-//     const AAnimal *j = new Dog();
-//     const AAnimal *i = new Cat();
+    const AAnimal *j = new Dog();
+    const AAnimal *i = new Cat();
 
-//     delete j; // should not create a leak
-//     delete i;
+    delete j; // should not create a leak
+    delete i;
 
-//     std::cout << "-------------Array of Animals--------------" << std::endl;
+    std::cout << "-------------Array of Animals--------------" << std::endl;
 
-//     const AAnimal *animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
+    const AAnimal *animals[4] = {new Dog(), new Dog(), new Cat(), new Cat()};
 
-//     for (int i = 0; i < 4; i++) {
-//         delete animals[i];
-//     }
+    for (int i = 0; i < 4; i++) {
+        delete animals[i];
+    }
 
-//     std::cout << "--------------Deep copy brain-----------------" << std::endl;
+    std::cout << "--------------Deep copy brain-----------------" << std::endl;
 
-//     Brain *first = new Brain();
-//     Brain *second = new Brain();
+    Brain *first = new Brain();
+    Brain *second = new Brain();
 
-//     // first->showIdeas();
+    // first->showIdeas();
 
-//     *second = *first; // will make a deep copy
-//     delete first;
+    *second = *first; // will make a deep copy
+    delete first;
 
-//     // second->showIdeas(); // without deep copy, this would give a seg fault
-//     delete second;
+    // second->showIdeas(); // without deep copy, this would give a seg fault
+    delete second;
 
-//     std::cout << "--------------Deep copy Dog-----------------" << std::endl;
+    std::cout << "--------------Deep copy Dog-----------------" << std::endl;
 
-//     const Dog *dogOne = new Dog();
-//     const Dog *dogTwo = new Dog(*dogOne);
+    const Dog *dogOne = new Dog();
+    const Dog *dogTwo = new Dog(*dogOne);
 
-//     delete dogOne;
-//     delete dogTwo; // should not create a leak
+    delete dogOne;
+    delete dogTwo; // should not create a leak
 
-//     std::cout << "--------------Deep copy Cat-----------------" << std::endl;
+    std::cout << "--------------Deep copy Cat-----------------" << std::endl;
 
-//     const Cat *catOne = new Cat();
-//     const Cat *catTwo = new Cat(*catOne);
+    const Cat *catOne = new Cat();
+    const Cat *catTwo = new Cat(*catOne);
 
-//     delete catOne;
-//     delete catTwo; // should not create a leak
+    delete catOne;
+    delete catTwo; // should not create a leak
 
-//     return 0;
+    return 0;
 }
  

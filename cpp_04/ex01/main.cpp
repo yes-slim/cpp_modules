@@ -6,7 +6,7 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 00:25:25 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 20:18:25 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:00:17 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,10 @@
 #include "Dog.hpp"
 
 int main(void) {
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-
-	// delete j;
-	// delete i;
-
-	// Animal* Animal_arr[] = {new Dog(), new Dog(), new Cat(), new Cat()};
-	// for (int i = 0; i < 4; i++) {
-	// 	Animal_arr[i]->makeSound();
-	// 	delete Animal_arr[i];
+	// Dog basic;
+	// {
+	// Dog tmp = basic;
 	// }
-	// return 0;
   std::cout << "--------------Subject example-----------------" << std::endl;
 
     const Animal *j = new Dog();

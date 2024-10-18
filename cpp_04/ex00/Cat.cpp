@@ -6,13 +6,13 @@
 /*   By: yes-slim <yes-slim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 11:43:25 by yes-slim          #+#    #+#             */
-/*   Updated: 2024/10/09 11:47:41 by yes-slim         ###   ########.fr       */
+/*   Updated: 2024/10/09 21:51:12 by yes-slim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat") {
+Cat::Cat() : Animal() , type("Cat") {
 	std::cout << "Constructor for " << this->type << " is called" << std::endl;
 };
 
