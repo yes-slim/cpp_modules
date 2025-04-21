@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    Bureaucrat B("dokkaebi", 2);
+    Bureaucrat B("dokkaebi", 6);
     
     // sign 25, exec 5
     PresidentialPardonForm a("contrat");
@@ -24,10 +24,10 @@ int main(void)
         // B.executeForm(b);
         // b.execute(B);
         
-        a.beSigned(B);
+        // a.beSigned(B);
         B.signForm(a);
 		B.executeForm(a);
-		a.execute(B);
+		// a.execute(B);
         
         // c.beSigned(B);
         // B.signForm(c);
