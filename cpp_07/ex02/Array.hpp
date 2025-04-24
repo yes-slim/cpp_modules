@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <string>
 
 template <typename T>
 class Array {
@@ -11,11 +12,11 @@ class Array {
 		unsigned int _size;
 	public:
 		// constructor no parameters
-		Array() :	_array(nullptr), _size(0) {} 
+		Array() :	_array(0), _size(0) {} 
 		// constructor with size
 		Array(unsigned int n) : _array(new T[n]) , _size(n) {}
 		//copy constructor
-		Array(const Array &other) : _array(nullptr), _size(0) {*this = other;}
+		Array(const Array &other) : _array(0), _size(0) {*this = other;}
 		// copy assignment operator
 		Array &operator=(const Array &other) {
 			if (this != &other) 
