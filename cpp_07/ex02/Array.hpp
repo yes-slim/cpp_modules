@@ -8,7 +8,7 @@
 template <typename T>
 class Array {
 	private:
-		int *_array;
+		T *_array;
 		unsigned int _size;
 	public:
 		// constructor no parameters

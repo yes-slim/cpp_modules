@@ -39,7 +39,7 @@ int main() {
 
     // Test with an array of integers
 	char charArray[] = "abcdef";
-	unsigned int charLength = strlen(charArray);
+	unsigned int charLength = sizeof(charArray) / sizeof(charArray[0]);
 
 	std::cout << "Print charArray members:" << std::endl; 
     iter(charArray, charLength, print);
