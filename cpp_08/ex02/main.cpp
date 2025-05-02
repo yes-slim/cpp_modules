@@ -21,7 +21,7 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
-
+	
     std::cout << "------------list----------\n";
     std::list<int> mlist;
     mlist.push_back(5);
