@@ -2,7 +2,7 @@
 
 int main(int ac, char ** av)
 {
-    if (ac != 2 || (ac == 2 && strcmp(av[1] ,  "input.txt")))
+    if (ac != 2 || (ac == 2 && strcmp(av[1] ,  "input.csv")))
     {
         std::cout << "Error : try with one file called input.csv\n";
         exit(0);
